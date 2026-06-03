@@ -1,0 +1,167 @@
+{
+  "db_id": "university",
+  "tables": {
+    "departments": {
+      "columns": [
+        {
+          "name": "dept_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "dept_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "building",
+          "type": "TEXT"
+        },
+        {
+          "name": "budget",
+          "type": "REAL"
+        }
+      ],
+      "create_statement": "CREATE TABLE IF NOT EXISTS `departments` (`dept_id` INTEGER, `dept_name` TEXT, `building` TEXT, `budget` REAL);"
+    },
+    "students": {
+      "columns": [
+        {
+          "name": "student_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "first_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "last_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "age",
+          "type": "INTEGER"
+        },
+        {
+          "name": "gpa",
+          "type": "REAL"
+        },
+        {
+          "name": "dept_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "email",
+          "type": "TEXT"
+        },
+        {
+          "name": "major",
+          "type": "TEXT"
+        },
+        {
+          "name": "year",
+          "type": "INTEGER"
+        }
+      ],
+      "create_statement": "CREATE TABLE IF NOT EXISTS `students` (`student_id` INTEGER, `first_name` TEXT, `last_name` TEXT, `age` INTEGER, `gpa` REAL, `dept_id` INTEGER, `email` TEXT, `major` TEXT, `year` INTEGER);"
+    },
+    "instructors": {
+      "columns": [
+        {
+          "name": "instructor_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "name",
+          "type": "TEXT"
+        },
+        {
+          "name": "dept_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "salary",
+          "type": "REAL"
+        },
+        {
+          "name": "title",
+          "type": "TEXT"
+        }
+      ],
+      "create_statement": "CREATE TABLE IF NOT EXISTS `instructors` (`instructor_id` INTEGER, `name` TEXT, `dept_id` INTEGER, `salary` REAL, `title` TEXT);"
+    },
+    "courses": {
+      "columns": [
+        {
+          "name": "course_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "course_name",
+          "type": "TEXT"
+        },
+        {
+          "name": "dept_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "credits",
+          "type": "INTEGER"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        }
+      ],
+      "create_statement": "CREATE TABLE IF NOT EXISTS `courses` (`course_id` INTEGER, `course_name` TEXT, `dept_id` INTEGER, `credits` INTEGER, `description` TEXT);"
+    },
+    "enrollments": {
+      "columns": [
+        {
+          "name": "enrollment_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "student_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "course_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "grade",
+          "type": "TEXT"
+        },
+        {
+          "name": "semester",
+          "type": "TEXT"
+        }
+      ],
+      "create_statement": "CREATE TABLE IF NOT EXISTS `enrollments` (`enrollment_id` INTEGER, `student_id` INTEGER, `course_id` INTEGER, `grade` TEXT, `semester` TEXT);"
+    },
+    "teaches": {
+      "columns": [
+        {
+          "name": "teaches_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "instructor_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "course_id",
+          "type": "INTEGER"
+        },
+        {
+          "name": "semester",
+          "type": "TEXT"
+        },
+        {
+          "name": "year",
+          "type": "INTEGER"
+        }
+      ],
+      "create_statement": "CREATE TABLE IF NOT EXISTS `teaches` (`teaches_id` INTEGER, `instructor_id` INTEGER, `course_id` INTEGER, `semester` TEXT, `year` INTEGER);"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# Environment
+.env
+
+# Generated files
+database.db
+schema_cache.pkl
+llm_logs.txt
+app.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
